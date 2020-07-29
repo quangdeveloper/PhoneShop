@@ -1,0 +1,68 @@
+server:
+  port: 8085
+
+### config he thong
+
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/phone?useSSL=false&serverTimezone=GMT%2B7&useLegacyDatetimeCode=false&allowPublicKeyRetrieval=true&useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: quang1998
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        format_sql: true
+
+
+
+  # cau hình cho file anh tai lên
+  servlet:
+    multipart:
+      enabled: true
+      max-request-size: 20MB
+      max-file-size: 10MB
+#      cau hinh log
+  logging:
+  level:
+  org:
+  springframework:
+  web:
+  filter:
+  CommonsRequestLoggingFilter: DEBUG
+
+#fire base configuration
+app:
+  firebase-configuration-file:
+  jwt:
+    secret: KYIVtA7915PUEWTqTca74sENpw48u7nkzSJiJmitF7D2PJWOu
+    expriedTime: 6000000
+
+config:
+  mail:
+    username: muadongquehuongtoi@gmail.com
+    password: fqfwqlpvlevjqazs
+    host: smtp.gmail.com
+    port: 587
+    properties:
+      mail :
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+        amount: 10
+dir:
+  attackMail: F:\\FlowerInMeLinhSources\\AttackmentMail\\
+  avatar: F:\\FlowerInMeLinhSources\\Avatar\\
+
+time:
+  contain: 180
+
+default:
+  password: 123456
+
+

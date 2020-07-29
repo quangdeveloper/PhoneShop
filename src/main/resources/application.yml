@@ -1,0 +1,7 @@
+server:
+  servlet:
+    context-path: /nsi
+
+spring:
+  profiles:
+    active: dev
